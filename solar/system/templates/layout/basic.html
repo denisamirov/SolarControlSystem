@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="shortcut icon" href="{% static 'app_1/pictures/ico.png'%}" type="image/png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        {% block style %}
+        {% endblock %}
+
+</head>
+
+<div class="wrapper" style="min-height: calc(100vh); display: flex; flex-direction: column;">
+
+<body style="background-color: #eaeaea; height: 100%;">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=#">Система диагностики солнечных панелей</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Прогноз на сутки вперед</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=#>Предупреждения</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+<main style="flex: 1 1 auto; margin-top: 1%;">
+{% block content %}
+{% endblock %}
+</main>
+
+
+
+
+<footer class="bg-dark text-center text-white" style='margin-top: 3%';>
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <ul class="nav col justify-content-end list-unstyled d-flex" style="left: 50%; transform: translate(-50%, -50%); position: absolute;">
+        <li class="ms-3"><a class="text-muted" href="https://fasie.ru/programs/programma-umnik/?special_version=Y"><p>Проект выполнен в рамках программы "УМНИК"</p></li>
+      </ul>
+
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="#"> Система мониторинга и диагностики солнечных панелей</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+</div>
+
+</body>
+</html>

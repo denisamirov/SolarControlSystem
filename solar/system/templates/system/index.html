@@ -1,0 +1,506 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block style %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col">
+
+    <table class="table table-dark" style=" margin-left: 2%; margin-top: 0%">
+        <tbody>
+<!--    Оперативное напряжение    -->
+
+    <tr>
+      <th scope="col">Параметр</th>
+      <th scope="col">Время</th>
+      <th scope="col">Значение</th>
+    </tr>
+
+    <tr>
+    <td class="name"></td>
+    <td class="time"></td>
+    <td class="value" style="color:yellow; font-weight: bold;"></td>
+    </tr>
+<!--    Оперативный ток-->
+    <tr>
+    <td class="name_i"></td>
+    <td class="time_i"></td>
+    <td class="value_i" style="color:yellow; font-weight: bold;"></td>
+    </tr>
+<!--    Оперативная инсоляция-->
+    <tr>
+    <td class="name_s"></td>
+    <td class="time_s"></td>
+    <td class="value_s" style="color:yellow; font-weight: bold;"></td>
+    </tr>
+        </tbody>
+    </table>
+
+
+<!--    Оперативная температура-->
+
+
+    <table class="table table-dark" style="margin-left: 2%; margin-top: 2%">
+        <tbody>
+    <tr>
+      <th scope="col">Параметр</th>
+      <th scope="col">Значение</th>
+      <th scope="col">Ед.измерения</th>
+    </tr>
+
+    <tr>
+    <td class="name_t"></td>
+    <td class="value_t" style="color:orange; font-weight: bold;"></td>
+    <td class="m_t"></td>
+    </tr>
+
+    <tr>
+    <td class="name_t_f"></td>
+    <td class="value_t_f" style="color:orange; font-weight: bold;"></td>
+    <td class="m_t_f"></td>
+    </tr>
+
+    <tr>
+    <td class="name_feel"></td>
+    <td class="value_feel" style="color:orange; font-weight: bold;"></td>
+    <td class="m_feel"></td>
+    </tr>
+
+    <tr>
+    <td class="name_w"></td>
+    <td class="value_w" style="color:orange; font-weight: bold;"></td>
+    <td class="m_w"></td>
+    </tr>
+
+    <tr>
+    <td class="name_c"></td>
+    <td class="value_c" style="color:orange; font-weight: bold;"></td>
+    <td class="m_c"></td>
+    </tr>
+
+    <tr>
+    <td class="name_con"></td>
+    <td class="value_con"></td>
+    <td class="m_con"></td>
+    </tr>
+
+        </tbody>
+    </table>
+
+
+        <table class="table table-dark" style="margin-left: 2%; margin-top: 2%">
+        <tbody>
+    <tr>
+      <th scope="col">Нарушение</th>
+      <th scope="col">Активно</th>
+      <th scope="col">Индикатор</th>
+      <th scope="col">Действия для устранения</th>
+    </tr>
+
+    <tr>
+    <td class="sc">Короткое замыкание</td>
+    <td class="sc_active" style="color:orange; font-weight: bold;"></td>
+    <td class="sc_i"></td>
+    <td class="sc_to_do"></td>
+    </tr>
+
+
+        </tbody>
+    </table>
+
+        </div>
+
+            <div class="col">
+
+    <table class="table table-dark" style="display:inline; margin-left: 2%; margin-top: 2%">
+        <tbody>
+    <tr>
+      <th scope="col">Дата</th>
+      <th scope="col">Время</th>
+      <th scope="col">Напряжение, B</th>
+      <th scope="col">Сила тока, А</th>
+      <th scope="col">Мощность, Вт</th>
+      <th scope="col">Инсоляция, Вт/м</th>
+    </tr>
+    <tr>
+    <td class="data_0" style="color:orange; font-weight: bold;"></td>
+    <td class="time_0">00:00</td>
+    <td class="value_v_0"></td>
+    <td class="value_i_0"></td>
+    <td class="value_p_0"></td>
+    <td class="value_s_0"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">01:00</td>
+    <td class="value_v_1"></td>
+    <td class="value_i_1"></td>
+    <td class="value_p_1"></td>
+    <td class="value_s_1"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">02:00</td>
+    <td class="value_v_2"></td>
+    <td class="value_i_2"></td>
+    <td class="value_p_2"></td>
+    <td class="value_s_2"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">03:00</td>
+    <td class="value_v_3"></td>
+    <td class="value_i_3"></td>
+    <td class="value_p_3"></td>
+    <td class="value_s_3"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">04:00</td>
+    <td class="value_v_4"></td>
+    <td class="value_i_4"></td>
+    <td class="value_p_4"></td>
+    <td class="value_s_4"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">05:00</td>
+    <td class="value_v_5"></td>
+    <td class="value_i_5"></td>
+    <td class="value_p_5"></td>
+    <td class="value_s_5"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">06:00</td>
+    <td class="value_v_6"></td>
+    <td class="value_i_6"></td>
+    <td class="value_p_6"></td>
+    <td class="value_s_6"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">07:00</td>
+    <td class="value_v_7"></td>
+    <td class="value_i_7"></td>
+    <td class="value_p_7"></td>
+    <td class="value_s_7"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">08:00</td>
+    <td class="value_v_8"></td>
+    <td class="value_i_8"></td>
+    <td class="value_p_8"></td>
+    <td class="value_s_8"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">09:00</td>
+    <td class="value_v_9"></td>
+    <td class="value_i_9"></td>
+    <td class="value_p_9"></td>
+    <td class="value_s_9"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">10:00</td>
+    <td class="value_v_10"></td>
+    <td class="value_i_10"></td>
+    <td class="value_p_10"></td>
+    <td class="value_s_10"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">11:00</td>
+    <td class="value_v_11"></td>
+    <td class="value_i_11"></td>
+    <td class="value_p_11"></td>
+    <td class="value_s_11"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">12:00</td>
+    <td class="value_v_12"></td>
+    <td class="value_i_12"></td>
+    <td class="value_p_12"></td>
+    <td class="value_s_12"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">13:00</td>
+    <td class="value_v_13"></td>
+    <td class="value_i_13"></td>
+    <td class="value_p_13"></td>
+    <td class="value_s_13"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">14:00</td>
+    <td class="value_v_14"></td>
+    <td class="value_i_14"></td>
+    <td class="value_p_14"></td>
+    <td class="value_s_14"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">15:00</td>
+    <td class="value_v_15"></td>
+    <td class="value_i_15"></td>
+    <td class="value_p_15"></td>
+    <td class="value_s_15"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">16:00</td>
+    <td class="value_v_16"></td>
+    <td class="value_i_16"></td>
+    <td class="value_p_16"></td>
+    <td class="value_s_16"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">17:00</td>
+    <td class="value_v_17"></td>
+    <td class="value_i_17"></td>
+    <td class="value_p_17"></td>
+    <td class="value_s_17"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">18:00</td>
+    <td class="value_v_18"></td>
+    <td class="value_i_18"></td>
+    <td class="value_p_18"></td>
+    <td class="value_s_18"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">19:00</td>
+    <td class="value_v_19"></td>
+    <td class="value_i_19"></td>
+    <td class="value_p_19"></td>
+    <td class="value_s_19"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">20:00</td>
+    <td class="value_v_20"></td>
+    <td class="value_i_20"></td>
+    <td class="value_p_20"></td>
+    <td class="value_s_20"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">21:00</td>
+    <td class="value_v_21"></td>
+    <td class="value_i_21"></td>
+    <td class="value_p_21"></td>
+    <td class="value_s_21"></td>
+    </tr>
+    <tr>
+    <td class="data_0"></td>
+    <td class="hour">22:00</td>
+    <td class="value_v_22"></td>
+    <td class="value_i_22"></td>
+    <td class="value_p_22"></td>
+    <td class="value_s_22"></td>
+    </tr>
+    <tr>
+    <td class="data_23"></td>
+    <td class="hour">23:00</td>
+    <td class="value_v_23"></td>
+    <td class="value_i_23"></td>
+    <td class="value_p_23"></td>
+    <td class="value_s_23"></td>
+    </tr>
+        </tbody>
+    </table>
+
+                <div>
+                </div>
+
+</div>
+
+<script>
+(function worker() {
+  $.ajax({
+    url: 'http://127.0.0.1:8000/a',
+    success: function(result) {
+        console.log('result', result)
+  console.log(result.name)
+  var log1 = document.querySelector(".name");
+  var log2 = document.querySelector(".time");
+  var log3 = document.querySelector(".value");
+  var a = 'Напряжение, В';
+  var b = String(result.a[0].time).substr(11,8);
+  var c = String(result.a[0].value).substr(0,6);
+  log1.innerHTML = a;
+  log2.innerHTML = b;
+  log3.innerHTML = c;
+
+
+  var log4 = document.querySelector(".name_i");
+  var log5 = document.querySelector(".time_i");
+  var log6 = document.querySelector(".value_i");
+  var a1 = 'Сила тока, А';
+  var b1 = String(result.current[0].time).substr(11,8);
+  var c1 = String(result.current[0].value).substr(0,6);
+  log4.innerHTML = a1;
+  log5.innerHTML = b1;
+  log6.innerHTML = c1;
+
+  var log7 = document.querySelector(".name_s");
+  var log8 = document.querySelector(".time_s");
+  var log9 = document.querySelector(".value_s");
+  var a2 = 'Инсоляция Вт/м';
+  var b2 = String(result.resistence[0].time).substr(11,8);
+  var c2 = String(result.resistence[0].value).substr(0,6);
+  log7.innerHTML = a2;
+  log8.innerHTML = b2;
+  log9.innerHTML = c2;
+
+        if (c <= 0)
+    {
+    var voltage_sc = document.querySelector(".sc_active");
+    voltage_sc.innerHTML = 'ДА'
+    var voltage_sc_i = document.querySelector(".sc_i");
+    voltage_sc_i.innerHTML = 'U = ' + c;
+    var voltage_sc_do = document.querySelector(".sc_to_do");
+    voltage_sc_do.innerHTML = '1. Осмотреть цепь; 2. Выявить участок с обрывом; 3. Восстановить целостность цепи путем соедениения контактов';
+    }
+    else
+    {
+     var voltage_sc = document.querySelector(".sc_active");
+    voltage_sc.innerHTML = 'НЕТ';
+        var voltage_sc_i = document.querySelector(".sc_i");
+    voltage_sc_i.innerHTML = '';
+        var voltage_sc_do = document.querySelector(".sc_to_do");
+    voltage_sc_do.innerHTML = '';
+
+
+    }
+
+    },
+    complete: function() {
+      // Schedule the next request when the current one complete
+      setTimeout(worker, 1000);
+    }
+
+
+
+  });
+})();
+
+(function worker_hour() {
+  $.ajax({
+    url: 'http://127.0.0.1:8000/b',
+    success: function(result) {
+        console.log('result', result)
+  console.log(result.name)
+
+
+  document.querySelector(".data_0").innerHTML = String(result.date);
+  for (let i=0; i < 24; i ++)
+    {
+  voltage = String(result['h' + i].value__avg)
+  current = String(result['i' + i].value__avg)
+  document.querySelector(`.value_v_${i}`).innerHTML = voltage;
+  document.querySelector(`.value_i_${i}`).innerHTML = current;
+  document.querySelector(`.value_p_${i}`).innerHTML = Number(voltage) * Number(current);
+  document.querySelector(`.value_s_${i}`).innerHTML = String(result['s' + i].value__avg);
+    }
+
+
+    },
+    complete: function() {
+      // Schedule the next request when the current one complete
+      setTimeout(worker_hour, 32000);
+    }
+  });
+})();
+
+
+
+(function worker_temp() {
+  $.ajax({
+    url: 'http://api.openweathermap.org/data/2.5/weather?id=551487&APPID=d2b4377ae47d39fe6f9e9772cf1ced5e&units=metric&lang=ru',
+    success: function(result) {
+        console.log('result', result)
+  var log1 = document.querySelector(".name_t");
+  var log2 = document.querySelector(".value_t");
+  var log3 = document.querySelector(".m_t");
+  var a = 'Минимальная температура';
+  var b = result.main.temp_min;
+  var c = '℃';
+  log1.innerHTML = a;
+  log2.innerHTML = b;
+  log3.innerHTML = c;
+
+  var log4 = document.querySelector(".name_t_f");
+  var log5 = document.querySelector(".value_t_f");
+  var log6 = document.querySelector(".m_t_f");
+  var a2 = 'Максимальная температура';
+  var b2 = result.main.temp_max;
+  var c2 = '℃';
+  log4.innerHTML = a2;
+  log5.innerHTML = b2;
+  log6.innerHTML = c2;
+
+  var log7 = document.querySelector(".name_w");
+  var log8 = document.querySelector(".value_w");
+  var log9 = document.querySelector(".m_w");
+  var a3 = 'Скорость ветра';
+  var b3 = result.wind.speed;
+  var c3 = 'м/с';
+  log7.innerHTML = a3;
+  log8.innerHTML = b3;
+  log9.innerHTML = c3;
+
+  var log10 = document.querySelector(".name_con");
+  var log11 = document.querySelector(".value_con");
+  var log12 = document.querySelector(".m_con");
+  var a4 = 'Условия';
+  var b4 = result.weather[0].description;
+  log10.innerHTML = a4;
+  log11.innerHTML = b4;
+
+  var log13 = document.querySelector(".name_c");
+  var log14 = document.querySelector(".value_c");
+  var log15 = document.querySelector(".m_c");
+  var a5 = 'Облачность';
+  var b5 = result.clouds.all;
+  var c5 = '%';
+  log13.innerHTML = a5;
+  log14.innerHTML = b5;
+  log15.innerHTML = c5;
+
+  var log16 = document.querySelector(".name_feel");
+  var log17 = document.querySelector(".value_feel");
+  var log18 = document.querySelector(".m_feel");
+  var a6 = 'Ощущается как';
+  var b6 = result.main.feels_like;
+  var c6 = '℃';
+  log16.innerHTML = a6;
+  log17.innerHTML = b6;
+  log18.innerHTML = c6;
+
+
+
+    },
+    complete: function() {
+      // Schedule the next request when the current one complete
+      setTimeout(worker_temp, 30000);
+    }
+  });
+})();
+</script>
+
+{% endblock %}
+
